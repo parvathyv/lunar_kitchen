@@ -8,9 +8,11 @@
 
 <h2>Ingredients</h2>
 <ul>
-  <% @recipe.ingredients.each do |ingredient| %>
-    <li><%= ingredient.name %></li>
-  <% end %>
+  <% if @recipe.ingredients != nil %>
+  	<% @recipe.ingredients.each do |ingredient| %>
+    	<li><%= ingredient.name %></li>
+  	<% end %>
+  <%end%>
 </ul>
 
 <p><a href="/recipes">Back to Recipes</a></p>
