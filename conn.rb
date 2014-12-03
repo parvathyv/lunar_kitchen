@@ -1,8 +1,8 @@
 require 'pg'
 
+class Database
 
-
-def db_connection 
+  def self.db_connection 
     begin
   		connection = PG.connect(dbname: 'recipes')
 
@@ -11,5 +11,6 @@ def db_connection
   		ensure
     	connection.close
   	end
-end 
 
+  end
+end
